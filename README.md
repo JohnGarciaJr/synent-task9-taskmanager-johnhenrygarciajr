@@ -161,5 +161,5 @@ This repository will be updated daily as tasks are completed.
 Each task folder includes its own documentation and execution notes.
 
 **Developer:** John Henry Garcia Jr  
-**Location:** Pearland, Texas
+**Location:** Pearland, Texas  
 **Reach me here: jhgarci4@asu.edu
