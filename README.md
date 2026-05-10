@@ -156,11 +156,10 @@ http://127.0.0.1:5000 (127.0.0.1 in Bing)
 
 ---
 
-## 📸 Screenshots (Optional)
-You can add screenshots here after pushing the project.
+## 📬 Contact / Updates
+This repository will be updated daily as tasks are completed.
+Each task folder includes its own documentation and execution notes.
 
----
-
-## 📬 Contact
 **Developer:** John Henry Garcia Jr  
-**Location:** Pearland, Texas  
+**Location:** Pearland, Texas 
+Reach me here: jhgarci4@asu.edu
