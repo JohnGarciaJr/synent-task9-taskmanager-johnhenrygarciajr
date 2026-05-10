@@ -1,0 +1,85 @@
+/* General layout tweaks */
+body {
+    background-color: #f5f7fa;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Card-like container for forms */
+.container {
+    max-width: 900px;
+}
+
+/* Headings */
+h2, h3 {
+    font-weight: 600;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    border-bottom: 2px solid #222;
+}
+
+/* Form styling */
+form {
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Buttons */
+.btn-primary,
+.btn-success,
+.btn-secondary,
+.btn-danger {
+    border-radius: 6px;
+    padding: 8px 14px;
+    font-weight: 500;
+}
+
+/* Table styling */
+.table {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.table th {
+    font-weight: 600;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+/* Status badges */
+.badge {
+    padding: 6px 10px;
+    font-size: 0.85rem;
+}
+
+/* Add Task button */
+.btn-primary {
+    background-color: #0d6efd;
+}
+
+/* Hover effects */
+.btn:hover {
+    opacity: 0.9;
+    transition: 0.2s ease-in-out;
+}
+
+/* Alerts */
+.alert {
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+/* Centered empty-state message */
+.alert-info {
+    background-color: #e8f4ff;
+    border: 1px solid #b6ddff;
+    color: #0b4f8a;
+}
