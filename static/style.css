@@ -54,6 +54,13 @@ form {
     vertical-align: middle !important;
 }
 
+/* Limit Description column width but allow full wrapping */
+.table td:nth-child(2) {
+    max-width: 350px;   /* adjust to taste */
+    white-space: normal;
+    word-wrap: break-word;
+}
+
 /* Status badges */
 .badge {
     padding: 4px 8px;
@@ -65,8 +72,8 @@ form {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    height: 28px;        /* consistent height */
-    padding: 0 10px;     /* horizontal padding only */
+    height: 28px;
+    padding: 0 10px;
     font-size: 0.8rem;
 }
 
@@ -95,18 +102,16 @@ form {
 }
 
 .actions-cell {
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    height: 100%;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle !important;
 }
 
 .actions-cell a.btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: inline-block;
     padding: 6px 12px;
     min-width: 70px;
     font-size: 14px;
-    line-height: 1.2;
+    line-height: 1.4;
+    margin: 2px 2px;
 }

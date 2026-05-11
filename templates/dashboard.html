@@ -96,14 +96,17 @@
                 <!-- ACTIONS -->
                 <td class="actions-cell">
                     {% if not task.completed %}
-                        <a href="{{ url_for('complete_task', task_id=task.id) }}" 
-                           class="btn btn-success">Done</a>
+                        <form method="POST" action="{{ url_for('complete_task', task_id=task.id) }}"
+                            style="display:inline;">
+                            <button class="btn btn-success">Done</button>
+                        </form>
                     {% endif %}
                     <a href="{{ url_for('edit_task', task_id=task.id) }}" 
                        class="btn btn-secondary">Edit</a>
-                    <a href="{{ url_for('delete_task', task_id=task.id) }}" 
-                       class="btn btn-danger"
-                       onclick="return confirm('Delete this task?');">Delete</a>
+                    <form method="POST" action="{{ url_for('delete_task', task_id=task.id) }}"
+                        onsubmit="return confirm('Delete this task?');" style="display:inline;">
+                        <button class="btn btn-danger">Delete</button>
+                    </form>
                 </td>
             </tr>
             {% endfor %}

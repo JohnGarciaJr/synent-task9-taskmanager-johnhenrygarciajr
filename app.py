@@ -7,6 +7,8 @@ from werkzeug.security import generate_password_hash, check_password_hash
 import os
 
 app = Flask(__name__)
+app.secret_key = os.environ.get("SECRET_KEY", "fallback-dev-key")
+
 # Set the path for the SQLite database
 DATABASE = "database.db"
 
@@ -26,8 +28,6 @@ def init_db():
         conn.commit()
 if not os.path.exists(DATABASE):
     init_db()
-
-app.secret_key = os.urandom(24)
 
 # Initialize the limiter
 limiter = Limiter(
@@ -55,7 +55,13 @@ def home():
 def register():
     if request.method == "POST":
         username = request.form["username"]
-        password = generate_password_hash(request.form["password"])
+        raw_password = request.form["password"]
+
+        if len(raw_password) < 8:
+            flash("Password must be at least 8 characters.", "danger")
+            return redirect(url_for("register"))
+
+        password = generate_password_hash(raw_password)
 
         conn = get_db()
         cur = conn.cursor()
