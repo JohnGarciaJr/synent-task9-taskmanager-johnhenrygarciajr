@@ -4,9 +4,29 @@ from flask import Flask, render_template, request, redirect, session, url_for, f
 import sqlite3
 from werkzeug.security import generate_password_hash, check_password_hash
 
-app = Flask(__name__)
-
 import os
+
+app = Flask(__name__)
+# Set the path for the SQLite database
+DATABASE = "database.db"
+
+# -------------------------
+# DATABASE CONNECTION
+# -------------------------
+def get_db():
+    conn = sqlite3.connect(DATABASE)
+    conn.row_factory = sqlite3.Row
+    return conn
+
+# Initialize the database if it doesn't exist
+def init_db():
+    with app.open_resource("schema.sql", mode="r") as f:
+        conn = get_db()
+        conn.executescript(f.read())
+        conn.commit()
+if not os.path.exists(DATABASE):
+    init_db()
+
 app.secret_key = os.urandom(24)
 
 # Initialize the limiter
@@ -15,15 +35,6 @@ limiter = Limiter(
     app=app,
     default_limits=["200 per day", "50 per hour"]
 )
-
-
-# -------------------------
-# DATABASE CONNECTION
-# -------------------------
-def get_db():
-    conn = sqlite3.connect("database.db")
-    conn.row_factory = sqlite3.Row
-    return conn
 
 
 # -------------------------
