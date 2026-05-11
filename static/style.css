@@ -34,7 +34,7 @@ form {
 .btn-secondary,
 .btn-danger {
     border-radius: 6px;
-    padding: 8px 14px;
+    /*padding: 8px 14px;*/
     font-weight: 500;
 }
 
@@ -51,13 +51,23 @@ form {
 }
 
 .table td {
-    vertical-align: middle;
+    vertical-align: middle !important;
 }
 
 /* Status badges */
 .badge {
-    padding: 6px 10px;
-    font-size: 0.85rem;
+    padding: 4px 8px;
+    font-size: 0.8rem;
+    line-height: 1.2;
+}
+
+.table td .badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 28px;        /* consistent height */
+    padding: 0 10px;     /* horizontal padding only */
+    font-size: 0.8rem;
 }
 
 /* Add Task button */
@@ -82,4 +92,21 @@ form {
     background-color: #e8f4ff;
     border: 1px solid #b6ddff;
     color: #0b4f8a;
+}
+
+.actions-cell {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    height: 100%;
+}
+
+.actions-cell a.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 12px;
+    min-width: 70px;
+    font-size: 14px;
+    line-height: 1.2;
 }
