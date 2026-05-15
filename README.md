@@ -7,7 +7,7 @@ This project is my submission for **Task 9: Full Stack Python Project**, where t
 I chose to build a **Task Manager Application** that allows users to register, log in, and manage their personal tasks with features like priority levels, due dates, completion tracking, and filtering.
 
 Link to Video Submission:
-[Task 9 — Full Stack Web App Video]([https://www.linkedin.com/posts/johngarciajr83_internship-python-programming-ugcPost-7461167197239996416-egEr?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADaOpwwB33Y0_oTjzePpZVr26EEozGnel7I](https://www.linkedin.com/posts/johngarciajr83_internship-python-programming-activity-7461170212038627328-Ajwc?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADaOpwwB33Y0_oTjzePpZVr26EEozGnel7I))
+[Task 9 — Full Stack Web App Video](https://www.linkedin.com/posts/johngarciajr83_internship-python-programming-activity-7461170212038627328-Ajwc?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADaOpwwB33Y0_oTjzePpZVr26EEozGnel7I)
 
 ---
 
